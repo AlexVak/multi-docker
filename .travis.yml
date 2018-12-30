@@ -20,15 +20,15 @@ after_success:
   - docker push alexvak/multi-server
   - docker push alexvak/multi-worker
 
-deploy: 
-  provider: elasticbeanstalk
-  region: us-west-2
-  app: multi-docker
-  env: MultiDocker-env
-  bucket_name: elasticbeanstalk-us-west-2-829277154185
-  bucket_path: multi-docker
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_ACCESS_KEY"
+# deploy: 
+#   provider: elasticbeanstalk
+#   region: us-west-2
+#   app: multi-docker
+#   env: MultiDocker-env
+#   bucket_name: elasticbeanstalk-us-west-2-829277154185
+#   bucket_path: multi-docker
+#   on:
+#     branch: master
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key:
+#     secure: "$AWS_SECRET_ACCESS_KEY"
